@@ -1,4 +1,4 @@
-from flask import Flask, send_file
+from flask import Flask, render_template
 from decouple import config
 
 app = Flask(__name__)
@@ -6,7 +6,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return send_file('templates/index.html')
+    return render_template(
+        'index.html',
+        host_api=config('HOST_API')
+    )
 
 
 if __name__ == '__main__':

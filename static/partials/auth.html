@@ -1,0 +1,22 @@
+<div ng-controller="authCtrl">
+  <script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+      <h3 class="modal-title">Insira suas credenciais</h3>
+    </div>
+    <form>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="username">Usuário</label>
+          <input type="text" class="form-control" id="username" placeholder="Usuário" ng-model="user.username">
+        </div>
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input type="password" class="form-control" id="password" placeholder="Senha" ng-model="user.password">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="ok(user)">Entrar</button>
+      </div>
+    </form>
+  </script>
+</div>
