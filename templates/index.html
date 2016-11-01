@@ -5,10 +5,18 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body style="padding-top: 70px;" ng-app="libraryApp">
-    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
-        <div class="container">
-        </div>
-    </nav>
+        <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/authors">Autores</a></li>
+                        <li><a href="#/categories">Categorias</a></li>
+                        <li><a href="#/books">Livros</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
         <div class="container" ng-view></div>
 
         <div ng-include="'/static/partials/auth.html'"></div>
