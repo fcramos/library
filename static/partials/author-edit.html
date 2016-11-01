@@ -1,0 +1,11 @@
+<div class="col-md-6 col-md-offset-3" ng-init="update()">
+    <h1>{{ author.id ? 'Edição' : 'Adição'}} de Author</h1>
+    <form name="authorForm" ng-submit="submit()">
+        <div class="form-group">
+            <label for="id_name">Nome</label>
+            <input type="text" class="form-control" id="id_name" placeholder="Nome" ng-model="author.name">
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="#/authors" class="btn btn-warning">Cancelar</a>
+    </form>
+</div>

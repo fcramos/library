@@ -8,6 +8,14 @@ angular.module('libraryApp', ['ngRoute', 'ngCookies', 'ui.bootstrap'])
         templateUrl: 'static/partials/author-list.html',
         controller: 'authorListCtrl'
       })
+      .when('/authors/add', {
+        templateUrl: 'static/partials/author-edit.html',
+        controller: 'authorEditCtrl'
+      })
+      .when('/authors/:id', {
+        templateUrl: 'static/partials/author-edit.html',
+        controller: 'authorEditCtrl'
+      })
       .otherwise({
         redirectTo: '/authors'
       });
