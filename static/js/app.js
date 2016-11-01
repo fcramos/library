@@ -28,8 +28,12 @@ angular.module('libraryApp', ['ngRoute', 'ngCookies', 'ui.bootstrap'])
         templateUrl: 'static/partials/category-edit.html',
         controller: 'categoryEditCtrl'
       })
+      .when('/books', {
+        templateUrl: 'static/partials/book-list.html',
+        controller: 'bookListCtrl'
+      })
       .otherwise({
-        redirectTo: '/authors'
+        redirectTo: '/books'
       });
 
   });
