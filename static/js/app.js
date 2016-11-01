@@ -32,6 +32,14 @@ angular.module('libraryApp', ['ngRoute', 'ngCookies', 'ui.bootstrap'])
         templateUrl: 'static/partials/book-list.html',
         controller: 'bookListCtrl'
       })
+      .when('/books/add', {
+        templateUrl: 'static/partials/book-edit.html',
+        controller: 'bookEditCtrl'
+      })
+      .when('/books/:id', {
+        templateUrl: 'static/partials/book-edit.html',
+        controller: 'bookEditCtrl'
+      })
       .otherwise({
         redirectTo: '/books'
       });
