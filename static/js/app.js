@@ -20,6 +20,14 @@ angular.module('libraryApp', ['ngRoute', 'ngCookies', 'ui.bootstrap'])
         templateUrl: 'static/partials/category-list.html',
         controller: 'categoryListCtrl'
       })
+      .when('/categories/add', {
+        templateUrl: 'static/partials/category-edit.html',
+        controller: 'categoryEditCtrl'
+      })
+      .when('/categories/:id', {
+        templateUrl: 'static/partials/category-edit.html',
+        controller: 'categoryEditCtrl'
+      })
       .otherwise({
         redirectTo: '/authors'
       });

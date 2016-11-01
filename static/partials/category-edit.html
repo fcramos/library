@@ -1,0 +1,11 @@
+<div class="col-md-6 col-md-offset-3" ng-init="update()">
+    <h1>{{ category.id ? 'Edição' : 'Adição'}} de Categoria</h1>
+    <form name="categoryForm" ng-submit="submit()">
+        <div class="form-group">
+            <label for="id_description">Descrição</label>
+            <input type="text" class="form-control" id="id_description" placeholder="Nome" ng-model="category.description">
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="#/categories" class="btn btn-warning">Cancelar</a>
+    </form>
+</div>
